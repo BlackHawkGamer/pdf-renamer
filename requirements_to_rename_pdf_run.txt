@@ -1,3 +1,45 @@
-pandas
-openpyxl
-rapidfuzz
+# ASO PDF Renamer
+
+Automates the renaming of ASO PDF files using an Excel employee mapping.
+
+## Features
+
+- Reads employee data from Excel
+- Fuzzy name matching with RapidFuzz
+- Automatic filename standardization
+- Position-based fallback naming
+- Batch processing of PDF files
+
+## Requirements
+
+```bash
+pip install pandas openpyxl rapidfuzz
+```
+
+## Usage
+
+Place PDFs in the same folder as the script and run:
+
+```bash
+python rename_pdfs_v2.py
+```
+
+## Naming Rules
+
+Match found:
+
+```text
+35736_FABIANE TRESKA_AUX_COZINHA_ASO_26-10.pdf
+```
+
+Fallback:
+
+```text
+FULL_NAME_SHORT_POSITION_ASO_26-10.pdf
+```
+
+Last resort:
+
+```text
+FULL_NAME_SEM_CARGO_ASO_26-10.pdf
+```
