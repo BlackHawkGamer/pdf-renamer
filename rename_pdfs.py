@@ -8,10 +8,7 @@ from rapidfuzz import process, fuzz
 # CONFIG
 # ======================================================
 
-EXCEL_FILE = (
-    r"C:\Users\rodri\OneDrive - Zortéa Construções Ltda"
-    r"\Zortea_map_efetivo.xlsx"
-)
+EXCEL_FILE = Path(__file__).parent / "Zortea_map_efetivo.xlsx"
 
 PDF_FOLDER = Path(__file__).parent
 
